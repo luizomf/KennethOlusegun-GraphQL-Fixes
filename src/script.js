@@ -1,28 +1,14 @@
-import { ApolloServer, gql } from 'apollo-server';
+/* eslint-disable prettier/prettier */
+import { ApolloServer } from 'apollo-server'
+import { resolvers, typeDefs } from './graphql/schema';
 
 // eslint-disable-next-line prettier/prettier
 const server = new ApolloServer({
-            typeDefs: gql `
-			type Query {
-				id: ID!
-                name: String!
-                age: Int!
-                average: Float!
-                married: Boolean!
-                arrayString: [String]
+    typeDefs,
+    resolvers,
+});
 
-			}
-		`,
-            resolvers: {
-                Query: {
-                    id: () => '1asd987-9-a',
-                    name: () => 'Kenneth',
-                    age: () => 24,
-                    average: () => 50.54,
-                    married: () => false,
-                    arrayString: () => ['A', 'B'],
-                });
 
-            server.listen(4003).then(({ url }) => {
-                console.log(`Server listening on url ${url}`);
-            });
+server.listen(4003).then(({ url }) => {
+    console.log(` Server listening on url ${ url }`);
+});
