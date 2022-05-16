@@ -1,4 +1,4 @@
-import { ApolloServer } from 'apollo-server'
+import { ApolloServer } from 'apollo-server';
 import { context } from './graphql/context';
 import { resolvers, typeDefs } from './graphql/schema';
 
@@ -10,5 +10,5 @@ const server = new ApolloServer({
 
 
 server.listen(4003).then(({ url }) => {
-    console.log(` Server listening on url ${ url }`);
+    console.log(`Server listening on url ${url}`);
 });
