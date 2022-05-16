@@ -7,7 +7,12 @@ export const userTypeDefs = gql `
   }
 `;
 
-type User {
+type User = {
     id: Id!
+        firstName: String!
+        lastName: String!
         username: String!
+        indexRef: Int!
+        createdAt: String!
+        //  posts: [Post!] !
 }

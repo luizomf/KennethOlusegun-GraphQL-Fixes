@@ -1,11 +1,15 @@
-/* eslint-disable prettier/prettier */
 import { ApolloServer } from 'apollo-server'
+import fetch from 'node-fetch';
 import { resolvers, typeDefs } from './graphql/schema';
 
-// eslint-disable-next-line prettier/prettier
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    context: () => {
+        return {
+            fetch,
+        }
+    }
 });
 
 
