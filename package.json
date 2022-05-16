@@ -21,6 +21,7 @@
     "homepage": "https://github.com/KennethOlusegun/GraphQL#readme",
     "dependencies": {
         "apollo-server": "^3.6.7",
+        "dotenv": "^16.0.1",
         "graphql": "^16.4.0",
         "json-server": "^0.17.0",
         "node-fetch": "^3.2.4"
