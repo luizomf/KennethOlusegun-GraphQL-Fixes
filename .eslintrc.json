@@ -5,10 +5,7 @@
     "node": true,
     "jest": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -16,7 +13,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [],
+  "plugins": ["prettier"],
   "rules": {
     "no-unused-vars": [
       "error",
